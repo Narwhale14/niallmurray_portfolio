@@ -1,25 +1,78 @@
-button {
-    background-color: navy;
-    color:white;
-    height: 30px;
-    border-radius: 5px;
+/*CSS reset- owerwrite the default setings, so boxes stay inside
+parent*/
+
+html {
+    box-sizing: border-box;
+
+    size: 100%;
+    margin: 0;
 }
 
-#btn-1 {
-    background-color: rgb(80, 80, 220);
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
-#btn-2 {
-    background-color: rgb(61, 72, 118);
+.wrapper { /* Wraps header + main*/
+    display: flex;
+    flex-direction: column;
+    
+    height: 100vh;
+    width: 100vw;
+    border: 3px solid black;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-button:hover {
-    cursor: pointer;
-    opacity: 0.8;
+.header {
+    width: 100%;
+    height: 20%;
+
+    display: flex;
+    border: 2px solid gray;
 }
 
-.buttons {
-    display: inline-flex;
+.main { /* Wraps sidebar + content */
+    width: 100%;
+    height: 100%;
+
+    display: flex;
     flex-direction: row;
-    gap: 20px;
+    border: 2px solid gray;
 }
+
+.sidebar {
+    width: 20%;
+    height: 100%;
+
+    border: 2px solid black;
+}
+
+.content {
+    width: 80%;
+    height: 100%;
+
+    border: 2px solid black;
+}
+
+.panel {
+    width: 50%;
+    height: 50%;
+
+    margin: auto;
+    margin: 20px;
+    border: 2px solid gray;
+}
+
+/* @media (max-width :650px) {
+    .card, .left-bottom, .right-bottom {
+        width: 100%;
+        height: auto;
+    }
+
+    .bottom {
+        flex-direction: column;
+    }
+} */
