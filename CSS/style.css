@@ -1,0 +1,25 @@
+button {
+    background-color: navy;
+    color:white;
+    height: 30px;
+    border-radius: 5px;
+}
+
+#btn-1 {
+    background-color: rgb(80, 80, 220);
+}
+
+#btn-2 {
+    background-color: rgb(61, 72, 118);
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.buttons {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 20px;
+}
