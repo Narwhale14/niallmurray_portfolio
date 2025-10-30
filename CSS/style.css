@@ -6,6 +6,8 @@ body {
     flex-direction: column;
     box-sizing: border-box;
     min-height: 100vh;
+
+    background-color: rgb(240, 240, 245);
 }
 
 h1 {
@@ -22,11 +24,16 @@ h1 {
 
 .header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 1%;
+
+    background-color: rgb(230, 230, 240);
 }
 
 .header-icons {
+    align-items: inherit;
     margin-left: auto;
     display: flex;
+    gap: 0.5rem;
 }
