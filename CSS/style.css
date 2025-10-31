@@ -49,12 +49,26 @@ body {
     font-size: 1.25rem;
 }
 
-.contact-me {
+.gap-reduce {
+    margin-bottom: -1rem;
+}
+
+.contexts {
     display: flex;
     align-items: inherit;
     justify-content: center;
     min-width: 100%;
     gap: 1rem;
+}
+
+.txt-redirect {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.txt-redirect:hover {
+    filter: brightness(2);
+    text-decoration: underline;
 }
 
 .social-icons {
