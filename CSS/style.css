@@ -7,7 +7,9 @@ body {
     box-sizing: border-box;
     min-height: 100vh;
 
-    background-color: rgb(240, 240, 245);
+    background-color: rgb(190, 190, 190);
+    background-image: url('/images/marble-bg.jpg');
+    background-size: cover;
 }
 
 h1 {
@@ -22,18 +24,30 @@ h1 {
     box-sizing: inherit;
 }
 
+/* header bar */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1%;
+    padding-inline: 2%;
+    padding-block: 1%;
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.13);
 
-    background-color: rgb(230, 230, 240);
+    background-color: rgb(190, 190, 190);
+    background-image: url('/images/marble-h.jpg');
+    background-size: cover;
 }
 
-.header-icons {
+.contact-me {
     align-items: inherit;
     margin-left: auto;
     display: flex;
-    gap: 0.5rem;
+    gap: 2rem;
+}
+
+.social-icons {
+    align-items: inherit;
+    margin-left: auto;
+    display: flex;
+    gap: 2rem;
 }
