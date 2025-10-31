@@ -19,35 +19,49 @@ body {
     box-sizing: inherit;
 }
 
+.img-redirect img {
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.img-redirect:hover img {
+    filter: brightness(2);
+    transform: scale(1.05);
+}
+
 /* header bar */
 
 .header-wrapper {
     display: flex;
     justify-content: space-between;
+    flex-direction: inherit;
     align-items: center;
+    gap: 1rem;
     padding-inline: 2%;
     padding-block: 1%;
     box-shadow: 0 2px 30px rgba(0, 0, 0, 0.13);
 
-    background-color: rgb(190, 190, 190);
-    background-image: url('/images/marble-bg.jpg');
-    background-size: cover;
+    background-color: whitesmoke;
+    /* background-image: url('/images/marble-bg.jpg');
+    background-size: cover; */
 
     color: rgb(46, 50, 70);
     font-size: 1.25rem;
 }
 
 .contact-me {
-    align-items: inherit;
-    margin-right: auto;
     display: flex;
+    align-items: inherit;
+    justify-content: center;
+    min-width: 100%;
     gap: 1rem;
 }
 
 .social-icons {
-    align-items: inherit;
-    margin-left: auto;
     display: flex;
+    align-items: inherit;
+    justify-content: center;
+    min-width: 100%;
     gap: 2rem;
 }
 
@@ -76,9 +90,9 @@ body {
     display: flex;
     min-height: 100vh;
     
-    background-color: rgb(190, 190, 190);
-    background-image: url('/images/marble-bg.jpg');
-    background-size: cover;
+    background-color: whitesmoke;
+    /* background-image: url('/images/marble-bg.jpg');
+    background-size: cover; */
 }
 
 /* fonts */
