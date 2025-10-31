@@ -1,6 +1,8 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
     line-height: 1.6;
+
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -40,7 +42,7 @@ h1 {
 
 .contact-me {
     align-items: inherit;
-    margin-left: auto;
+    margin-right: auto;
     display: flex;
     gap: 2rem;
 }
@@ -50,4 +52,20 @@ h1 {
     margin-left: auto;
     display: flex;
     gap: 2rem;
+}
+
+/* fonts */
+
+@font-face {
+    font-family: "Poppins";
+    src: url('/fonts/poppins-v24-latin-600.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url('/fonts/poppins-v24-latin-600italic.woff2') format('woff2');
+    font-weight: 600;
+    font-style: italic;
 }
