@@ -12,7 +12,12 @@ function currentSlide(n) {
 }
 
 function showSlide(n) {
-    let slides = document.getElementsByClassName('carousel-slide');
+    let slides = document.getElementsByClassName("carousel-slide");
+    let selectors = document.getElementsByClassName("selector");
+
+    // error handling
+    if(slides.length == 0)
+        return 0;
 
     // loop back to the start
     if(n > slides.length)
@@ -27,6 +32,14 @@ function showSlide(n) {
         slides[i].style.display = "none";
     }
 
+    // removes all active classes from dots
+    for(let i = 0; i < selectors.length; i++) {
+        selectors[i].classList.remove("selector-active");
+    }
+
     // set the currently selected slide to visible
     slides[slide_index - 1].style.display = "block";
+
+    // adds the active class to the current selector of the image
+    selectors[slide_index - 1].classList.add("selector-active");
 }
