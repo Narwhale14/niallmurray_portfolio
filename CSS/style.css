@@ -42,8 +42,6 @@ body {
     box-shadow: 0 2px 30px rgba(0, 0, 0, 0.13);
 
     background-color: whitesmoke;
-    /* background-image: url('/images/marble-bg.jpg');
-    background-size: cover; */
 
     color: rgb(46, 50, 70);
     font-size: 1.25rem;
@@ -102,11 +100,33 @@ body {
 
 .main-wrapper {
     display: flex;
-    min-height: 100vh;
+    flex-direction: column;
+    min-height: 150vh;
     
     background-color: whitesmoke;
-    /* background-image: url('/images/marble-bg.jpg');
-    background-size: cover; */
+    background-image: url('/images/marble-bg.jpg');
+    background-size: cover;
+}
+
+.panel-wrapper {
+    flex: 0.5;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    padding: 5rem;
+}
+
+.panel {
+    flex: 0.5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.13);
+    background-color: whitesmoke;
+
+    transition: all 0.3s ease;
+}
+
+.panel:hover {
+    transform: scale(1.01);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* fonts */
