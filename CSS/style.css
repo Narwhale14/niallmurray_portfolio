@@ -91,7 +91,7 @@ body {
     justify-content: center;
     min-height: 80vh;
 
-    background-image: url('/images/marble-bg-black.jpg');
+    background-image: url('/images/marble_bg_black.jpg');
     background-size: cover;
     background-attachment: fixed;
 }
@@ -101,15 +101,15 @@ body {
 .main-wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 150vh;
+    height: 150vh;
     
     background-color: whitesmoke;
-    background-image: url('/images/marble-bg.jpg');
+    background-image: url('/images/marble_bg.jpg');
     background-size: cover;
 }
 
 .panel-wrapper {
-    flex: 0.5;
+    height: 50%;
     display: flex;
     justify-content: center;
     gap: 5rem;
@@ -117,11 +117,25 @@ body {
 }
 
 .panel {
-    flex: 0.5;
+    width: 50%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.13);
     background-color: whitesmoke;
-
+    padding: 2.5rem;
     transition: all 0.3s ease;
+    border-radius: 0.5rem;
+}
+
+.panel-image {
+    overflow: hidden;
+    width: 50%;
+    height: 80%;
+    background-color: black;
+    border-radius: 0.5rem;
+}
+
+.panel-image img {
+    display: block;
+    object-fit: cover;
 }
 
 .panel:hover {
