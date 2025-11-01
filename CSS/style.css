@@ -1,7 +1,7 @@
 body {
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
     line-height: 1.6;
+    color: rgb(46, 50, 70);
 
     display: flex;
     flex-wrap: wrap;
@@ -17,6 +17,14 @@ body {
     padding: 0;
 
     box-sizing: inherit;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.25rem;
 }
 
 .img-redirect img {
@@ -40,10 +48,7 @@ body {
     padding-inline: 2%;
     padding-block: 1%;
     box-shadow: 0 2px 30px rgba(0, 0, 0, 0.13);
-
     background-color: whitesmoke;
-
-    color: rgb(46, 50, 70);
     font-size: 1.25rem;
 }
 
@@ -104,8 +109,6 @@ body {
     height: 150vh;
     
     background-color: whitesmoke;
-    background-image: url('/images/marble_bg.jpg');
-    background-size: cover;
 }
 
 .panel-wrapper {
@@ -117,30 +120,44 @@ body {
 }
 
 .panel {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
     width: 50%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.13);
     background-color: whitesmoke;
     padding: 2.5rem;
     transition: all 0.3s ease;
     border-radius: 0.5rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.13);
 }
 
 .panel-image {
-    overflow: hidden;
     width: 50%;
-    height: 80%;
+    height: 100%;
     background-color: black;
+    overflow: hidden;
     border-radius: 0.5rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.13);
 }
 
 .panel-image img {
-    display: block;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-.panel:hover {
-    transform: scale(1.01);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+.panel-desc {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.panel-head {
+    display: flex;
+    flex-direction: column;
+    min-height: 75%;
+    gap: 2rem;
+    overflow: hidden;
 }
 
 /* fonts */
