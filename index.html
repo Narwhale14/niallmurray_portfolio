@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="icon" type="image/png" sizes="32x32" href="./images/art.jpg"> -->
+    <script src="JS/carousel.js" defer></script>
     <link rel="stylesheet" href="CSS/style.css">
     <title>Niall Murray - Home</title>
 </head>
@@ -28,14 +29,23 @@
         </div>
     </div>
     <div class="app-wrapper">
-        <div class="parallax-wrapper">
+        <div class="parallax-wrapper fade" style="--fade-start: 0.3">
             <img src="images/marble_box.jpg" width="650" alt="name box">
         </div>
         <div class="main-wrapper">
-            <div class="panel-wrapper">
+            <div class="panels-wrapper">
                 <div class="panel">
-                    <div class="panel-image">
-                        <img src="images/final151_cropped_1.jpg" alt="final151 cover">
+                    <div class="panel-carousel">
+                        <div class="carousel-slide fade">
+                            <img src="images/final151_cropped_1.jpg" alt="final151 cover">
+                        </div>
+
+                        <div class="carousel-slide fade">
+                            <img src="images/final151_cropped.jpg" alt="final151 cover">
+                        </div>
+
+                        <a class="prev" onclick="shiftSlide(-1)">&#10094;</a>
+                        <a class="next" onclick="shiftSlide(1)">&#10095;</a>
                     </div>
                     <div class="panel-desc">
                         <div class="panel-head">

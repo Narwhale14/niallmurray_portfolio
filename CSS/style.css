@@ -1,22 +1,22 @@
 body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: rgb(46, 50, 70);
-
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     box-sizing: border-box;
+
     min-height: 100vh;
 
-    background-color: rgb(190, 190, 190);
+    background-color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: rgb(46, 50, 70);
 }
 
 *, *:before, *:after {
     margin: 0;
     padding: 0;
 
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -44,9 +44,11 @@ p {
     justify-content: space-between;
     flex-direction: inherit;
     align-items: center;
+
     gap: 1rem;
     padding-inline: 2%;
     padding-block: 1%;
+
     box-shadow: 0 2px 30px rgba(0, 0, 0, 0.13);
     background-color: whitesmoke;
     font-size: 1.25rem;
@@ -60,7 +62,9 @@ p {
     display: flex;
     align-items: inherit;
     justify-content: center;
+
     min-width: 100%;
+
     gap: 1rem;
 }
 
@@ -78,7 +82,9 @@ p {
     display: flex;
     align-items: inherit;
     justify-content: center;
+
     min-width: 100%;
+
     gap: 2rem;
 }
 
@@ -94,6 +100,7 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     min-height: 80vh;
 
     background-image: url('/images/marble_bg_black.jpg');
@@ -106,15 +113,18 @@ p {
 .main-wrapper {
     display: flex;
     flex-direction: column;
+
     height: 150vh;
     
     background-color: whitesmoke;
 }
 
-.panel-wrapper {
-    height: 50%;
+.panels-wrapper {
     display: flex;
     justify-content: center;
+
+    height: 50%;
+
     gap: 5rem;
     padding: 5rem;
 }
@@ -122,42 +132,100 @@ p {
 .panel {
     display: flex;
     flex-direction: row;
+
+    width: 50%;
+
     gap: 5rem;
-    width: 50%;
-    background-color: whitesmoke;
     padding: 2.5rem;
+
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.13);
     transition: all 0.3s ease;
-    border-radius: 0.5rem;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.13);
-}
-
-.panel-image {
-    width: 50%;
-    height: 100%;
-    background-color: black;
-    overflow: hidden;
-    border-radius: 0.5rem;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.13);
-}
-
-.panel-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .panel-desc {
     display: flex;
     flex-direction: column;
+
     width: 50%;
 }
 
 .panel-head {
     display: flex;
-    flex-direction: column;
     min-height: 75%;
-    gap: 2rem;
+
+    flex-direction: column;
     overflow: hidden;
+    gap: 2rem;
+}
+
+/* panel carousel */
+
+.panel-carousel {
+    width: 50%;
+    height: 100%;
+
+    position: relative;
+
+    background-color: black;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.13);
+    overflow: hidden;
+}
+
+.carousel-slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev, .next {
+    position: absolute;
+    cursor: pointer;
+    user-select: none;
+    padding: 3%;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 15% 15% 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 15% 0 0 15%;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(46, 50, 70, 0.8);
+}
+
+/* animations */
+
+.fade {
+    --fade-start: 0.4;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: var(--fade-start, 0.4)}
+    to {opacity: 1}
 }
 
 /* fonts */
