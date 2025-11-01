@@ -64,12 +64,11 @@ p {
     justify-content: center;
 
     min-width: 100%;
-
     gap: 1rem;
 }
 
 .txt-redirect {
-    transition: all 0.3s ease;
+    transition: filter 0.3s ease, text-decoration 0.3s ease;
     cursor: pointer;
 }
 
@@ -84,7 +83,6 @@ p {
     justify-content: center;
 
     min-width: 100%;
-
     gap: 2rem;
 }
 
@@ -124,7 +122,6 @@ p {
     justify-content: center;
 
     height: 70vh;
-
     gap: 5rem;
     padding: 5rem;
 }
@@ -134,7 +131,6 @@ p {
     flex-direction: row;
 
     width: 50%;
-
     gap: 5rem;
     padding: 2.5rem;
 
@@ -152,10 +148,10 @@ p {
 .panel-head {
     display: flex;
     min-height: 75%;
+    gap: 2rem;
 
     flex-direction: column;
     overflow: hidden;
-    gap: 2rem;
 }
 
 .card-style {
@@ -175,6 +171,12 @@ p {
     overflow: hidden;
 }
 
+.carousel-number {
+    position: absolute;
+    padding: 1rem;
+    color: whitesmoke;
+}
+
 .carousel-slide {
     width: 100%;
     height: 100%;
@@ -190,10 +192,10 @@ p {
     position: absolute;
     cursor: pointer;
     user-select: none;
-    padding: 3%;
 
     top: 50%;
     transform: translateY(-50%);
+    padding: 1rem;
 
     color: whitesmoke;
     font-weight: bold;
@@ -213,6 +215,33 @@ p {
 
 .prev:hover, .next:hover {
     background-color: rgba(46, 50, 70, 0.8);
+}
+
+.selector-wrapper {
+    display: flex;
+    position: absolute;
+
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.selector {
+    display: inline-block;
+    cursor: pointer;
+
+    width: 2vh;
+    aspect-ratio: 1 / 1;
+    margin: 0.5rem;
+    margin-bottom: 1rem;
+
+    background-color: rgba(245, 245, 245, 0.5);
+    border-radius: 50%;
+    transition: background-color 0.6s ease;
+}
+
+.selector:hover {
+    background-color: rgba(245, 245, 245, 0.9);
 }
 
 /* animations */

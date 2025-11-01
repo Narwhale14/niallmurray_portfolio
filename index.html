@@ -14,45 +14,59 @@
         <a href="/" class="img-redirect gap-reduce">
             <img src="images/initials.png" alt="initials" width="50">
         </a>
+
         <div class="contexts">
             <p class="txt-redirect">portfolio</p>
             <p class="txt-redirect">bio</p>
             <p class="txt-redirect">contact</p>
         </div>
+
         <div class="social-icons">
             <a href="https://github.com/Narwhale14" target="_blank" class="img-redirect">
                 <img src="images/github_icon.png" alt="github icon" width="35">
             </a>
+
             <a href="https://www.instagram.com/niallmurray14" target="_blank" class="img-redirect">
                 <img src="images/insta_icon.png" alt="insta icon" width="35">
             </a>
         </div>
     </div>
+
     <div class="app-wrapper">
         <div class="parallax-wrapper fade" style="--fade-start: 0.3">
             <img src="images/marble_box.jpg" width="650" alt="name box">
         </div>
+
         <div class="main-wrapper">
             <div class="panels-wrapper">
                 <!-- hunting season panel -->
                 <div class="panel card-style">
                     <div class="panel-carousel card-style">
                         <div class="carousel-slide fade">
+                            <div class="carousel-number">1 / 2</div>
                             <img src="images/hs_slide_1.jpg" alt="final151 cover">
                         </div>
 
                         <div class="carousel-slide fade">
+                            <div class="carousel-number">2 / 2</div>
                             <img src="images/hs_slide_2.png" alt="final151 cover">
                         </div>
+
                         <a class="prev" onclick="shiftSlide(-1)">&#10094;</a>
                         <a class="next" onclick="shiftSlide(1)">&#10095;</a>
+                        <div class="selector-wrapper">
+                            <span class="selector" onclick="currentSlide(1)"></span>
+                            <span class="selector" onclick="currentSlide(2)"></span>
+                        </div>
                     </div>
+
                     <div class="panel-desc">
                         <div class="panel-head">
                             <h1>Hunting Season</h1>
                             <p>A C++ SFML video game based on web game 'moomoo.io' where the player weilds various weapons to hunt aggressive
                             animals whilst collecting experience to level up and achieve great upgrades.</p>
                         </div>
+
                         <a href="https://github.com/Narwhale14/ShooterGame" target="_blank" class="img-redirect">
                             <img src="images/github_icon.png" alt="github icon" width="50">
                         </a>
