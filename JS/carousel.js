@@ -1,45 +1,54 @@
-let slide_index = 1;
-showSlide(slide_index);
+// Collection of all slide_indexs for all existing carousels
+const carouselState = { slide_index: [] };
 
-// user controls - shift slide left or right
-function shiftSlide(n) {
-    console.log(slide_index);
-    showSlide(slide_index += n);
+// All carousel objects
+const carousels = document.getElementsByClassName("panel-carousel");
+
+for(let i = 0; i < carousels.length; i++) {
+    carouselState.slide_index.push(1);
+    showSlide(carouselState.slide_index, i);
 }
 
-function currentSlide(n) {
-    showSlide(slide_index = n);
+/**
+ * Shifts to a slide based on a value from current slide
+ * @param {*} n number of slides from current slide
+ * @param {*} c carousel it's shifting from
+ */
+function shiftSlide(n, c) {
+    showSlide(carouselState.slide_index[c] += n, c);
 }
 
-function showSlide(n) {
-    let slides = document.getElementsByClassName("carousel-slide");
-    let selectors = document.getElementsByClassName("selector");
+/**
+ * Selects a slide directly in carousel
+ * @param {*} n number of slide to select
+ * @param {*} c carousel it's selecting from
+ */
+function selectSlide(n, c) {
+    showSlide(carouselState.slide_index[c] = n, c);
+}
 
-    // error handling
-    if(slides.length == 0)
-        return 0;
+/**
+ * Displays the current slide in carousel
+ * @param {*} n # of slide in carousel
+ * @param {*} c # of carousel to use
+ */
+function showSlide(n, c) {
+    const slides = carousels[c].getElementsByClassName("carousel-slide");
+    const selectors = carousels[c].getElementsByClassName("selector");
 
-    // loop back to the start
-    if(n > slides.length)
-        slide_index = 1;
+    if(slides.length == 0) return 0;
 
-    // loop back to the end
-    if(n < 1)
-        slide_index = slides.length
+    if(n > slides.length) carouselState.slide_index[c] = 1;
+    if(n < 1) carouselState.slide_index[c] = slides.length;
 
-    // set all slides to invisible
     for(let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
 
-    // removes all active classes from dots
     for(let i = 0; i < selectors.length; i++) {
         selectors[i].classList.remove("selector-active");
     }
 
-    // set the currently selected slide to visible
-    slides[slide_index - 1].style.display = "block";
-
-    // adds the active class to the current selector of the image
-    selectors[slide_index - 1].classList.add("selector-active");
+    slides[carouselState.slide_index[c] - 1].style.display = "block";
+    selectors[carouselState.slide_index[c] - 1].classList.add("selector-active");
 }
