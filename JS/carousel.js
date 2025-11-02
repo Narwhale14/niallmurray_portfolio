@@ -46,9 +46,9 @@ function showSlide(n, c) {
     }
 
     for(let i = 0; i < selectors.length; i++) {
-        selectors[i].classList.remove("selector-active");
+        selectors[i].classList.remove("active");
     }
 
     slides[carouselState.slide_index[c] - 1].style.display = "block";
-    selectors[carouselState.slide_index[c] - 1].classList.add("selector-active");
+    selectors[carouselState.slide_index[c] - 1].classList.add("active");
 }

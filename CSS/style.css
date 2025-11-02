@@ -6,7 +6,6 @@ body {
 
     min-height: 100vh;
 
-    background-color: whitesmoke;
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: rgb(46, 50, 70);
@@ -25,6 +24,7 @@ h1 {
 
 p {
     font-size: 1.25rem;
+    color: inherit;
 }
 
 .img-redirect img {
@@ -131,13 +131,15 @@ p {
 
 .fade {
     --fade-start: 0.6;
+    --fade-duration: 0.5s;
+
     animation-name: fade;
-    animation-duration: 0.5s;
+    animation-duration: var(--fade-duration, 0.5s);
 }
 
 @keyframes fade {
-    from {opacity: var(--fade-start, 0.6)}
-    to {opacity: 1}
+    from {opacity: var(--fade-start, 0.6); }
+    to {opacity: 1; }
 }
 
 /* fonts */

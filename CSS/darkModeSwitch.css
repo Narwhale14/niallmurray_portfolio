@@ -1,0 +1,62 @@
+.light-toggle {
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    padding: 2rem;
+}
+
+#switch {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+
+    width: 60px;
+    aspect-ratio: 2 / 1;
+    padding: 0.25rem;
+
+    background-color: rgb(46, 50, 70);
+    border-radius: 35%;
+}
+
+#knob {
+    content: "";
+    position: absolute;
+    cursor: pointer;
+
+    min-width: 40%;
+    aspect-ratio: 1 / 1;
+
+    background-color: whitesmoke;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.5s ease;
+}
+
+#knob.darkMode {
+    /* 110%  because the knob is 40% of the switch, therefore only 100% would move it 40% of the slider*/
+    transform: translateX(110%);
+    background-color: rgb(46, 50, 70);
+}
+
+.dark-mode-bg {
+    transition: background-color 0.5s ease;
+}
+
+.dark-mode-bg.active {
+    background-color: rgb(46, 50, 70);
+}
+
+.dark-mode-text {
+    transition: background-color 0.5s ease;
+}
+
+.dark-mode-text.active {
+    color: whitesmoke;
+}
+
+.dark-mode-img {
+    transition: opacity 0.5s ease;
+}

@@ -31,6 +31,7 @@
 .panel-desc {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 
     width: 60%;
 }
@@ -120,7 +121,7 @@
     display: inline-block;
     cursor: pointer;
 
-    width: 2vh;
+    width: 1.5vh;
     aspect-ratio: 1 / 1;
     margin: 0.5rem;
     margin-bottom: 1rem;
@@ -130,6 +131,6 @@
     transition: background-color 0.6s ease;
 }
 
-.selector:hover, .selector-active {
+.selector:hover, .selector.active {
     background-color: rgba(245, 245, 245, 0.9);
 }
