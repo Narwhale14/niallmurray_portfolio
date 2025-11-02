@@ -19,11 +19,5 @@ toggle.addEventListener("click", () => {
     applicable_bg.forEach(element => element.classList.toggle("active"));
     applicable_txt.forEach(element => element.classList.toggle("active"));
     applicable_pan.forEach(element => element.classList.toggle("dark-mode"));
-
-    applicable_img.forEach(element => {
-        // Fades out, swaps, fades back in
-        element.style.opacity = 0;
-        element.src = element.src.includes("lm") ? element.src.replace("lm", "dm") : element.src.replace("dm", "lm");
-        element.style.opacity = 1;
-    });
+    applicable_img.forEach(element => { element.src = element.src.includes("lm") ? element.src.replace("lm", "dm") : element.src.replace("dm", "lm") });
 });
