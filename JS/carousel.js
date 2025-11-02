@@ -29,8 +29,8 @@ function selectSlide(n, c) {
 
 /**
  * Displays the current slide in carousel
- * @param {*} n # of slide in carousel
- * @param {*} c # of carousel to use
+ * @param {*} n number of slide in carousel
+ * @param {*} c number of carousel to use
  */
 function showSlide(n, c) {
     const slides = carousels[c].getElementsByClassName("carousel-slide");

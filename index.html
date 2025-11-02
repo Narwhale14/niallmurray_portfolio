@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="icon" type="image/png" sizes="32x32" href="./images/art.jpg"> -->
+     
     <script src="JS/carousel.js" defer></script>
+    <script src="JS/jump.js" defer></script>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/panel.css">
+
     <title>Niall Murray - Home</title>
 </head>
 
@@ -17,7 +20,7 @@
         </a>
 
         <div class="contexts">
-            <p class="txt-redirect">portfolio</p>
+            <p id="jump-to-portfolio" class="txt-redirect">portfolio</p>
             <p class="txt-redirect">bio</p>
             <p class="txt-redirect">contact</p>
         </div>
@@ -38,26 +41,51 @@
             <img src="images/marble_box.jpg" width="650" alt="name box">
         </div>
 
-        <div class="main-wrapper">
+        <div id="recieve-jump-portfolio" class="main-wrapper">
             <div class="panels-wrapper">
                 <!-- hunting season panel -->
                 <div class="panel card-style">
                     <div class="panel-carousel card-style">
                         <div class="carousel-slide fade">
-                            <div class="carousel-number">1 / 2</div>
+                            <div class="carousel-number">1 / 6</div>
                             <img src="images/hs_slide_1.jpg" alt="final151 cover">
                         </div>
 
                         <div class="carousel-slide fade">
-                            <div class="carousel-number">2 / 2</div>
-                            <img src="images/hs_slide_2.png" alt="final151 cover">
+                            <div class="carousel-number">2 / 6</div>
+                            <img src="images/hs_slide_2.jpg" alt="final151 cover">
+                        </div>
+
+                        <div class="carousel-slide fade">
+                            <div class="carousel-number">3 / 6</div>
+                            <img src="images/hs_slide_3.jpg" alt="final151 cover">
+                        </div>
+
+                        <div class="carousel-slide fade">
+                            <div class="carousel-number">4 / 6</div>
+                            <img src="images/hs_slide_4.jpg" alt="final151 cover">
+                        </div>
+
+                        <div class="carousel-slide fade">
+                            <div class="carousel-number">5 / 6</div>
+                            <img src="images/hs_slide_5.jpg" alt="final151 cover">
+                        </div>
+
+                        <div class="carousel-slide fade">
+                            <div class="carousel-number">6 / 6</div>
+                            <img src="images/hs_slide_6.jpg" alt="final151 cover">
                         </div>
 
                         <a class="prev" onclick="shiftSlide(-1, 0)">&#10094;</a>
                         <a class="next" onclick="shiftSlide(1, 0)">&#10095;</a>
+
                         <div class="selector-wrapper">
                             <span class="selector" onclick="selectSlide(1, 0)"></span>
                             <span class="selector" onclick="selectSlide(2, 0)"></span>
+                            <span class="selector" onclick="selectSlide(3, 0)"></span>
+                            <span class="selector" onclick="selectSlide(4, 0)"></span>
+                            <span class="selector" onclick="selectSlide(5, 0)"></span>
+                            <span class="selector" onclick="selectSlide(6, 0)"></span>
                         </div>
                     </div>
 

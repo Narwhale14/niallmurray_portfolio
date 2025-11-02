@@ -120,13 +120,13 @@ p {
 /* animations */
 
 .fade {
-    --fade-start: 0.4;
+    --fade-start: 0.6;
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: 0.5s;
 }
 
 @keyframes fade {
-    from {opacity: var(--fade-start, 0.4)}
+    from {opacity: var(--fade-start, 0.6)}
     to {opacity: 1}
 }
 
