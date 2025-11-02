@@ -106,14 +106,19 @@ p {
     background-attachment: fixed;
 }
 
-.intro-card {
+#intro-card {
     display: inline-block;
     min-width: 36vw;
     min-height: 30vh;
-    background-image: url('/images/marble_box.jpg');
+    background-image: url('/images/name_box_lm.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: background-image 0.2s ease;
+}
+
+#intro-card.dark-mode {
+    background-image: url('/images/name_box_dm.jpg');
 }
 
 /* contents below parallax */

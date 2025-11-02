@@ -18,12 +18,16 @@
     padding: 2.5rem;
 
     background-color: whitesmoke;
-    background-image: url('/images/marble_bg.jpg');
+    transition: background-color 0.2s ease;
+}
+
+.panel.dark-mode {
+    background-color: rgb(51, 55, 75);
 }
 
 .card-style {
     border-radius: 0.5rem;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.13);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.13);
 }
 
 /* panel description */
