@@ -5,8 +5,8 @@
     justify-content: center;
 
     height: 70vh;
-    gap: 5rem;
-    padding: 5rem;
+    gap: 5vw;
+    padding: 3vw;
 }
 
 .panel {
@@ -14,8 +14,8 @@
     flex-direction: row;
 
     width: 50%;
-    gap: 5rem;
-    padding: 2.5rem;
+    gap: 2.5vw;
+    padding: 2.5vw;
 
     background-color: whitesmoke;
     transition: background-color 0.2s ease;
@@ -26,7 +26,7 @@
 }
 
 .card-style {
-    border-radius: 0.5rem;
+    border-radius: 3%;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.13);
 }
 
@@ -35,7 +35,7 @@
 .panel-desc {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow: auto;
 
     width: 60%;
 }
@@ -47,7 +47,7 @@
     margin-bottom: 1rem;
 
     flex-direction: column;
-    overflow: hidden;
+    overflow: auto;
 }
 
 /* panel carousel */
@@ -122,12 +122,6 @@
     padding: 1rem 1rem 0 1rem;
     gap: 0.5rem;
     transform: translateX(-50%);
-    border-radius: 15% 15% 0 0;
-    transition: background-color 0.3s ease;
-}
-
-.selector-wrapper:hover {
-    background-color: rgba(46, 50, 70, 0.8);
 }
 
 .selector {

@@ -7,7 +7,8 @@ body {
     min-height: 100vh;
 
     font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
+    font-size: 100%;
+    line-height: 1.5;
     color: rgb(46, 50, 70);
 }
 
@@ -44,6 +45,7 @@ p {
     justify-content: space-between;
     flex-direction: inherit;
     align-items: center;
+    position: relative;
 
     gap: 1rem;
     padding-inline: 2%;
@@ -51,7 +53,6 @@ p {
 
     box-shadow: 0 2px 30px rgba(0, 0, 0, 0.13);
     background-color: whitesmoke;
-    font-size: 1.25rem;
 }
 
 .gap-reduce {
@@ -108,12 +109,12 @@ p {
 
 #intro-card {
     display: inline-block;
-    min-width: 36vw;
-    min-height: 30vh;
+    min-width: 36rem;
+    min-height: 15rem;
     background-image: url('/images/name_box_lm.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     transition: background-image 0.2s ease;
 }
 
@@ -127,7 +128,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5rem;
+    padding: 4vw;
     
     background-color: whitesmoke;
 }
