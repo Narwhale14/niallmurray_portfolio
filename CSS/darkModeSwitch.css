@@ -66,6 +66,14 @@
     color: whitesmoke;
 }
 
+.dark-mode-border {
+    transition: border-color 0.2s ease
+}
+
+.dark-mode-border.active {
+    border-color: whitesmoke;
+}
+
 .dark-mode-img {
     transition: opacity 0.2s ease;
 }

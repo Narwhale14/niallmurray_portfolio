@@ -126,10 +126,18 @@ p {
 .main-wrapper {
     display: flex;
     flex-direction: column;
-
-    height: 150vh;
+    align-items: center;
+    padding: 5rem;
     
     background-color: whitesmoke;
+}
+
+.section-header {
+    text-align: center;
+    border-bottom: 2px solid rgb(46, 50, 70);
+    border-width: 0.15rem;
+    border-color: rgb(46, 50, 70);
+    width: 100%;
 }
 
 /* animations */
