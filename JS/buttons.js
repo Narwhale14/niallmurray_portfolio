@@ -13,7 +13,7 @@ document.getElementById("jump-to-contact").addEventListener("click", () => {
     document.getElementById("recieve-jump-contact").scrollIntoView({ behavior: "smooth" });
 });
 
-// Dark mode switch
+// Dark mode changeable components
 const applicable_bg = document.querySelectorAll(".dark-mode-bg");
 const applicable_txt = document.querySelectorAll(".dark-mode-text");
 const applicable_img = document.querySelectorAll(".dark-mode-img");
@@ -22,12 +22,27 @@ const intro_card = document.getElementById("intro-card");
 const toggle = document.getElementById("switch");
 const knob = document.getElementById("knob");
 
-toggle.addEventListener("click", () => {
+// Gets user preferences
+const initalMode = window.matchMedia('(prefers-color-scheme: light)').matches;
+if(!initalMode) {
+    applyDarkMode();
+}
+
+// Switches to dark mode
+function applyDarkMode() {
     knob.classList.toggle("dark-mode");
     toggle.classList.toggle("dark-mode");
     intro_card.classList.toggle("dark-mode");
     applicable_bg.forEach(element => element.classList.toggle("active"));
     applicable_txt.forEach(element => element.classList.toggle("active"));
     applicable_pan.forEach(element => element.classList.toggle("dark-mode"));
-    applicable_img.forEach(element => { element.src = element.src.includes("lm") ? element.src.replace("lm", "dm") : element.src.replace("dm", "lm") });
+    applicable_img.forEach(element => {
+        element.src = element.src.includes("lm")
+        ? element.src.replace("lm", "dm")
+        : element.src.replace("dm", "lm")
+    });
+}
+
+toggle.addEventListener("click", () => {
+    applyDarkMode();
 });
