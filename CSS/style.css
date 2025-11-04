@@ -20,17 +20,18 @@ body {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 p {
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: inherit;
 }
 
 .img-redirect img {
     display: block;
     transition: transform 0.3s ease, filter 0.3s ease;
+    width: 2rem;
 }
 
 .img-redirect:hover img {
