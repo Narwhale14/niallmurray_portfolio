@@ -1,0 +1,39 @@
+.bio-wrapper {
+    display: flex;
+    flex-direction: row;
+
+    height: 70vh;
+    width: 100%;
+    gap: 3vw;
+    padding: 3vw;
+}
+
+.profile {
+    display: flex;
+
+    width: 35%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#profile-pic {
+    display: inline-block;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url('/images/hs_slide_1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bio-desc {
+    display: flex;
+    flex-direction: column;
+
+    width: 65%;
+
+    gap: 2rem;
+    overflow: auto;
+}
