@@ -1,0 +1,17 @@
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 70vh;
+    width: 100%;
+    gap: 3vw;
+    padding: 10vw;
+}
+
+.contact-row {
+    display: flex;
+    
+    height: 35%;
+    width: 100%;
+}
