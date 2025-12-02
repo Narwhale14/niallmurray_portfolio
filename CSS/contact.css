@@ -1,17 +1,39 @@
 .contact-wrapper {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    height: 70vh;
+    height: 100%;
     width: 100%;
-    gap: 3vw;
-    padding: 10vw;
+    gap: 1vh;
+    padding: 3vw;
+    padding-top: 0;
 }
 
-.contact-row {
+.copyable {
     display: flex;
-    
-    height: 35%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.copyable.scale {
+    animation: click-anim 0.5s ease forwards;
+}
+
+@keyframes click-anim {
+    0% {transform: scale(1); background-color: transparent; }
+    50% {transform: scale(1.05); background-color: rgba(225, 225, 255, 0.1); }
+    100% {transform: scale(1); background-color: transparent; }
+}
+
+.contact-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3vw;
+    padding-bottom: 0.5vw;
     width: 100%;
 }
