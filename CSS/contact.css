@@ -25,7 +25,7 @@
 
 @keyframes click-anim {
     0% {transform: scale(1); background-color: transparent; }
-    50% {transform: scale(1.05); background-color: rgba(225, 225, 255, 0.1); }
+    50% {transform: scale(1.05); background-color: rgba(0, 0, 0, 0.1); }
     100% {transform: scale(1); background-color: transparent; }
 }
 
