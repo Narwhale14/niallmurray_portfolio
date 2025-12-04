@@ -1,15 +1,3 @@
-// Run immediately before page renders
-if (!window.matchMedia('(prefers-color-scheme: light)').matches) {
-    // User prefers dark mode - update image paths before DOM fully loads
-    document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.dark-mode-img').forEach(img => {
-            if (img.src && img.src.includes('lm')) {
-                img.src = img.src.replace('lm', 'dm');
-            }
-        });
-    });
-}
-
 // Portfolio button
 document.getElementById("jump-to-portfolio").addEventListener("click", () => {
     document.getElementById("recieve-jump-portfolio").scrollIntoView({ behavior: "smooth" });
@@ -48,11 +36,7 @@ function applyDarkMode() {
     applicable_bg.forEach(element => element.classList.toggle("active"));
     applicable_txt.forEach(element => element.classList.toggle("active"));
     applicable_pan.forEach(element => element.classList.toggle("dark-mode"));
-    applicable_img.forEach(element => {
-        element.src = element.src.includes("lm")
-        ? element.src.replace("lm", "dm")
-        : element.src.replace("dm", "lm")
-    });
+    applicable_img.forEach(element => element.classList.toggle("active"));
 }
 
 toggle.addEventListener("click", () => {

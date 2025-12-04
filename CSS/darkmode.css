@@ -75,5 +75,57 @@
 }
 
 .dark-mode-img {
-    transition: opacity 0.2s ease;
+    transition: background-image 0.3s ease;
+}
+
+/* Icon base styles */
+.icon {
+    width: 35px;
+    height: 35px;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+}
+
+.icon-large {
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+}
+
+.icon-medium {
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+}
+
+/* GitHub icon light/dark mode */
+.github-icon {
+    background-image: url('../images/github_icon_lm.png');
+}
+
+.github-icon.active {
+    background-image: url('../images/github_icon_dm.png');
+}
+
+/* Instagram icon light/dark mode */
+.insta-icon {
+    background-image: url('../images/insta_icon_lm.png');
+}
+
+.insta-icon.active {
+    background-image: url('../images/insta_icon_dm.png');
+}
+
+/* Initials icon light/dark mode */
+.initials-icon {
+    background-image: url('../images/initials_lm.png');
+}
+
+.initials-icon.active {
+    background-image: url('../images/initials_dm.png');
 }
