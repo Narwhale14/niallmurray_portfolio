@@ -36,7 +36,7 @@
     aspect-ratio: 1 / 1;
 
     background-color: whitesmoke;
-    background-image: url('/images/knob_lm.jpg');
+    background-image: url('../images/knob_lm.jpg');
     background-position: center;
     background-size: cover;
     border-radius: 50%;
@@ -47,7 +47,7 @@
     /* 110%  because the knob is 40% of the switch, therefore only 100% would move it 40% of the slider*/
     transform: translateX(110%);
     background-color: rgb(46, 50, 70);
-    background-image: url('/images/knob_dm.jpg');
+    background-image: url('../images/knob_dm.jpg');
 }
 
 .dark-mode-bg {
