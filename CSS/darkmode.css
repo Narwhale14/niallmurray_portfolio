@@ -80,24 +80,8 @@
 
 /* Icon base styles */
 .icon {
-    width: 35px;
-    height: 35px;
-    background-position: center;
-    background-size: cover;
-    display: inline-block;
-}
-
-.icon-large {
-    width: 50px;
-    height: 50px;
-    background-position: center;
-    background-size: cover;
-    display: inline-block;
-}
-
-.icon-medium {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     background-position: center;
     background-size: cover;
     display: inline-block;
