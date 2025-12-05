@@ -180,7 +180,7 @@ p {
     font-style: italic;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 650px) {
     .main-wrapper {
         padding: 3vw;
     }

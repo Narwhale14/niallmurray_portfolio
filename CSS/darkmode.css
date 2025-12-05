@@ -89,7 +89,7 @@
 
 /* GitHub icon light/dark mode */
 .github-icon {
-    background-image: url('../images/github_icon_lm.png');
+    background-image: url('/images/github_icon_lm.png');
 }
 
 .github-icon.active {
